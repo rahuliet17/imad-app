@@ -47,11 +47,7 @@ var articles = {
                  <p>
                      Hello! Rahul, your content of three article is served here.
                  </p>`
-    },
-    'thankyou': {
-        app.get('/thankyou',function(req,res){
-            res.sendFile(path.join(__dirname,'ui','thankyou.html'));
-    });}
+    }
 };
 
 function createTemplate(data){
@@ -99,9 +95,9 @@ app.get('/:articleName',function (req,res){
   res.send(createTemplate(articles[articleName]));
 });
 
-/*app.get('/thankyou',function (req,res){
+app.get('/thankyou',function (req,res){
     res.sendFile(path.join(__dirname, 'ui', 'thankyou.html'));
-});*/
+});
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
