@@ -47,7 +47,11 @@ var articles = {
                  <p>
                      Hello! Rahul, your content of three article is served here.
                  </p>`
-    }
+    },
+    'thankyou': {
+        app.get('/thankyou',function(req,res){
+            res.sendFile(path.join(__dirname,'ui','thankyou.html'));
+    });}
 };
 
 function createTemplate(data){
