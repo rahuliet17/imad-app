@@ -5,20 +5,50 @@ var path = require('path');
 var app = express();
 app.use(morgan('combined'));
 
-var articleOne = {
-    title:'Article One | Rahul',
-    heading: 'Article One',
-    date: 'Aug 18, 2017',
-    content:`<p>
-                     Hello! Rahul, your content of first article is served  here.
+var articles = {
+    articleOne: {
+        title:'Article One | Rahul',
+        heading: 'Article One',
+        date: 'Aug 18, 2017',
+        content:`<p>
+                         Hello! Rahul, your content of first article is served  here.
+                     </p>
+                     <p>
+                         Hello! Rahul, your content of first article is served here.
+                     </p>
+                     <p>
+                         Hello! Rahul, your content of first article is served here.
+                     </p>`
+    },
+    articleTwo: {
+        title:'Article Two | Rahul',
+        heading: 'Article Two',
+        date: 'Aug 18, 2017',
+        content:`            <p>
+                     Hello! Rahul, your content of second article is served here.
                  </p>
                  <p>
-                     Hello! Rahul, your content of first article is served here.
+                     Hello! Rahul, your content of second article is served here.
                  </p>
                  <p>
-                     Hello! Rahul, your content of first article is served here.
+                     Hello! Rahul, your content of second article is served here.
                  </p>`
-};
+    },
+    articleThree: {
+        title:'Article Three | Rahul',
+        heading: 'Article Three ',
+        date: 'Aug 18, 2017',
+        content:`    <p>
+                     Hello! Rahul, your content of three article is served here.
+                 </p>
+                 <p>
+                     Hello! Rahul, your content of three article is served here.
+                 </p>
+                 <p>
+                     Hello! Rahul, your content of three article is served here.
+                 </p>`
+    }
+}
 
 function createTemplate(data){
     var title = data.title;
