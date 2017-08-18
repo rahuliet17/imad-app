@@ -50,6 +50,10 @@ var articles = {
     }
 };
 
+app.get('/thankyou',function (req,res){
+    res.sendFile(path.join(__dirname, 'ui', 'thankyou.html'));
+});
+
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
@@ -90,13 +94,8 @@ app.get('/', function (req, res) {
 });
 
 app.get('/:articleName',function (req,res){
-  //res.sendFile(path.join(__dirname, 'ui', 'article-one.html'));
   var articleName=req.params.articleName;
   res.send(createTemplate(articles[articleName]));
-});
-
-app.get('/thankyou',function (req,res){
-    res.sendFile(path.join(__dirname, 'ui', 'thankyou.html'));
 });
 
 app.get('/ui/style.css', function (req, res) {
