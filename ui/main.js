@@ -4,13 +4,13 @@ var button = document.getElementById('b-count');
 button.onclick = function (){
     
     //Create a request object
-    var request = new XMLHttpRequest();
+    var httprequest = new XMLHttpRequest();
     
     //Capture the response and store it in a variable
-    request.onreadtstatechange = function () { 
-        if(request.readyState === XMLHttpRequest.DONE){
+    httprequest.onreadtstatechange = function () { 
+        if(httprequest.readyState === XMLHttpRequest.DONE){
             //Take some action
-            if(request.status === 200) {
+            if(httprequest.status === 200) {
                 var counter = request.responseText;
                 var span = document.getElementById('s-count');
                 span.innerHTML = counter.toString();
