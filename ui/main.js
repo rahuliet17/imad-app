@@ -20,8 +20,6 @@ function exec(){
 }
 
 //Submit Code
-var nameInput = document.getElementById('name');
-var name = nameInput.value;
 var submit = document.getElementById("submit_btn");
 function execn(){
     //Make the request to the server and send the name
@@ -44,7 +42,10 @@ function execn(){
                       ul.innerHTML = list;
                 } 
           } 
-    }; 
+    };
+    //Make the request
+    var nameInput = document.getElementById('name');
+    var name = nameInput.value;
     request.open("GET", "http://rockerahul97.imad.hasura-app.io/submit-name?name="+name, true);
     request.send(); 
     console.log('EXECUTED');
