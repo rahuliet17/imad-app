@@ -49,7 +49,3 @@ function execn(){
     request.send(); 
     console.log('EXECUTED');
 }
-  
-
-
-};
