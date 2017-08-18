@@ -1,14 +1,13 @@
-/*//Counter Code
-var button = document.getElementById('b-count');
-
-button.onclick = function (){
+//Counter Code
+//var button = document.getElementById('b-count');
+/*button.onclick = */function exec(){
     
     //Create a request object
-    var httprequest = new XMLHttpRequest();
+    var request = new XMLHttpRequest();
     
     //Capture the response and store it in a variable
-    httprequest.onreadtstatechange = function () { 
-        if(httprequest.readyState === XMLHttpRequest.DONE){
+    request.onreadtstatechange = function () { 
+        if(request.readyState === XMLHttpRequest.DONE){
             //Take some action
             if(httprequest.status === 200) {
                 var counter = request.responseText;
@@ -22,8 +21,8 @@ button.onclick = function (){
     //Make the request
     request.open('GET', 'http://rockerahul97.imad.hasura-app.io/counter', true);
     request.send(null);
-};*/
-function exec(){
+};
+/*function exec(){
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() 
     {
@@ -41,4 +40,4 @@ function exec(){
     request.open("GET", "http://rockerahul97.imad.hasura-app.io/counter", true);
     request.send(); 
     console.log('EXECUTED');
-}
+}*/
