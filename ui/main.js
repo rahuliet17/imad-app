@@ -36,7 +36,7 @@ button.onclick = function (){
     };
     
     //Make the request
-    request.open('GET',"http://rockerahul97.imad.hasura-app.io/counter",true);
+    request.open('GET','http://rockerahul97.imad.hasura-app.io/counter',true);
     request.send(null);
 };
     //Render the variable in the correct span
