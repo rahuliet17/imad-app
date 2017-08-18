@@ -54,6 +54,12 @@ app.get('/thankyou',function (req,res){
     res.sendFile(path.join(__dirname, 'ui', 'thankyou.html'));
 });
 
+var counter=0;
+app.get('/counter',function(req,res) {
+    counter = counter +  1;
+    res.send(counter.toString());
+});
+
 function createTemplate(data){
     var title = data.title;
     var date = data.date;
