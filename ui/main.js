@@ -9,7 +9,7 @@
     request.onreadtstatechange = function () { 
         if(request.readyState === XMLHttpRequest.DONE){
             //Take some action
-            if(httprequest.status === 200) {
+            if(request.status === 200) {
                 var counter = request.responseText;
                 var span = document.getElementById('s-count');
                 span.innerHTML = counter.toString();
