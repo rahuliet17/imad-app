@@ -17,7 +17,6 @@ img.onclick = function(){
 
 //Counter Code
 var button = document.getElementById('counter');
-
 button.onclick = function (){
     
     //Create a request object
