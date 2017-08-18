@@ -23,7 +23,7 @@ function exec(){
 var nameInput = document.getElementById('name');
 var name = nameInput.value;
 var submit = document.getElementById("submit_btn");
-function exec(){
+function execn(){
     //Make the request to the server and send the name
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() 
