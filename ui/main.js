@@ -1,5 +1,5 @@
 //Counter Code
-var button = document.getElementById('counter');
+var button = document.getElementById('b-count');
 
 button.onclick = function (){
     
