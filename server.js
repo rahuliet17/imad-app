@@ -11,6 +11,10 @@ var config = {
     password: process.env.DB_PASSWORD
 };
 
+app.get('/', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+});
+
 var pool = new Pool(config);
 app.get('/testdb',function(req,res){
    //Make a select request
@@ -108,9 +112,9 @@ function createTemplate(data){
     return htmlTemplate;
 }
 
-app.get('/', function (req, res) {
+/*app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
-});
+});*/
 
 /*var pool = new Pool(config);
 app.get('/testdb',function(req,res){
