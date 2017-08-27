@@ -11,6 +11,19 @@ var config = {
     password: process.env.DB_PASSWORD
 };
 
+var pool = new Pool(config);
+app.get('/testdb',function(req,res){
+   //Make a select request
+   //Return a response with the results
+   pool.query('SELECT * FROM test', (req,res) => {
+      if(err){
+          res.status(500).send(err.toString());
+      }else {
+        res.send(JSON.stringify(result));
+      }
+   });
+});
+
 app = express();
 app.use(morgan('combined'));
 
@@ -99,7 +112,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
-var pool = new Pool(config);
+/*var pool = new Pool(config);
 app.get('/testdb',function(req,res){
    //Make a select request
    //Return a response with the results
@@ -110,7 +123,7 @@ app.get('/testdb',function(req,res){
         res.send(JSON.stringify(result));
       }
    });
-});
+});*/
 
 app.get('/thankyou',function (req,res){
     res.sendFile(path.join(__dirname, 'ui', 'thankyou.html'));
