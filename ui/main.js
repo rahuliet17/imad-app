@@ -1,4 +1,4 @@
-//Counter Code
+/*//Counter Code
 function exec(){
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() 
@@ -49,7 +49,7 @@ function execn(){
     request.open("GET", "http://rockerahul97.imad.hasura-app.io/submit-name?name="+name, true);
     request.send(); 
     console.log('EXECUTED');
-}
+}*/
 
 //Submit Username/Password to login
 var submit = document.getElementById("submit_btn");
@@ -79,4 +79,4 @@ function execl(){
     request.open("POST", "http://rockerahul97.imad.hasura-app.io/login", true);
     request.setRequestHeader('Content-Type','application/json');
     request.send(JSON.stringify({username: username, password: password})); 
-};
+}
