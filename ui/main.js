@@ -73,7 +73,7 @@ function execl(){
     };
     //Make the request
     var username = document.getElementById('username').value;
-    var password = document.getElementById('password');
+    var password = document.getElementById('password').value;
     console.log(username);
     console.log(password);
     request.open("POST", "http://rockerahul97.imad.hasura-app.io/login", true);
