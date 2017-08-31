@@ -50,3 +50,33 @@ function execn(){
     request.send(); 
     console.log('EXECUTED');
 }
+
+//Submit Username/Password to login
+var submit = document.getElementById("submit_btn");
+function execn(){
+    
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function() 
+    {
+          if (request.readyState === XMLHttpRequest.DONE) 
+          {
+              //Take Some Action
+              if (request.status === 200) 
+                { 
+                      alert('Logged In Successfully');
+                }else if(request.status === 403){
+                    alert('Username/Password is incorrect');
+                }else if(request.status === 500){
+                    alert('Something went wrong on the server');
+                }
+          } 
+    };
+    //Make the request
+    var username = document.getElementById('username').value;
+    var password = document.getElementById('password');
+    console.log(username);
+    console.log(password);
+    request.open("POST", "http://rockerahul97.imad.hasura-app.io/login", true);
+    request.setRequestHeader('Content-Type','application/json');
+    request.send(JSON.stringify({username: username, password: password})); 
+}
