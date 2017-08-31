@@ -53,7 +53,7 @@ function execn(){
 
 //Submit Username/Password to login
 var submit = document.getElementById("submit_btn");
-function execn(){
+function execl(){
     
     var request = new XMLHttpRequest();
     request.onreadystatechange = function() 
